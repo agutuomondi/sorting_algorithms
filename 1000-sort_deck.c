@@ -36,16 +36,16 @@ int _strcmp(const char *s1, const char *s2)
  */
 char get_value(deck_node_t *card)
 {
-	 const char *values[] = {"Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen"};
-	 size_t i;
+	const char *values[] = {"Ace", "1", "2", "3", "4", "5", "6",
+	"7", "8", "9", "10", "Jack", "Queen"};
+	size_t i;
 
-	 for (i = 0; i < sizeof(values) / sizeof(values[0]); i++)
-	 {
-		 if (_strcmp(card->card->value, values[i]) == 0)
-			 return i;
-	 }
-
-	 return 13;
+	for (i = 0; i < sizeof(values) / sizeof(values[0]); i++)
+	{
+		if (_strcmp(card->card->value, values[i]) == 0)
+			return (i);
+	}
+	return (13);
 }
 
 /**
