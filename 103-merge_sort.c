@@ -70,11 +70,11 @@ void merge_sort(int *array, size_t size)
 {
 	int *buff;
 
-	if (!array || size < 2)
+	if (array == NULL || size < 2)
 		return;
 
 	buff = malloc(sizeof(int) * size);
-	if (!buff)
+	if (buff == NULL)
 		return;
 
 	merge_sort_recursive(array, buff, 0, size);
